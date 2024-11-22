@@ -1,0 +1,19 @@
+.settings-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content form label {
+    display: block;
+    margin: 10px 0;
+}
