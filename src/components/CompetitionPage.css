@@ -1,0 +1,82 @@
+.competition-page {
+    display: flex; /* 전체를 가로 배치 */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* 왼쪽 분류 영역 */
+.category-sidebar {
+    flex: 0 0 200px; /* 고정된 너비 */
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.category-sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.category-sidebar button {
+    display: block; /* 버튼을 세로로 배치 */
+    width: 100%; /* 버튼이 전체 너비를 차지 */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-sidebar button:hover {
+    background-color: #0056b3;
+}
+
+/* 공모전 리스트 영역 */
+.competition-content {
+    flex: 1; /* 남은 공간을 차지 */
+}
+
+.competition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.competition-table th,
+.competition-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+    color: white;
+}

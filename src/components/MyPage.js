@@ -19,18 +19,6 @@ function MyPage() {
 
     return (
         <div className="mypage-container">
-            <header className="mypage-header">
-                <h1>Join UP</h1>
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="/competitions">공모전</a>
-                    <a href="/challenges">챌린지</a>
-                    <a href="/board">게시판</a>
-                    <a href="/notices">공지사항</a>
-                    <a href="/mypage">마이페이지</a>
-                </nav>
-            </header>
-
             <main className="mypage-main">
                 <Profile onSettingsClick={handlePopupOpen}/>
                 <div>

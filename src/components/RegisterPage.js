@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from './Header.js';
 import './RegisterPage.css';
 import {useNavigate} from "react-router-dom";
 
@@ -38,7 +37,6 @@ function RegisterPage() {
 
     return (
         <div className="register-page">
-            <Header />
             <main>
                 <h2>회원 가입</h2>
                 {!success ? ( // 성공 여부에 따라 화면 분기

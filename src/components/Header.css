@@ -1,23 +1,32 @@
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f4f4f4;
-    padding: 10px 20px;
-    border-bottom: 2px solid #ddd;
+    flex-direction: column; /* 헤더를 수직 방향으로 배치 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 10px 0; /* 위아래 패딩을 줄여서 조정 */
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.header h1 {
+    font-size: 40px; /* 로고 크기를 크게 조정 */
+    margin-bottom: 10px; /* 로고 아래에 여백 추가 */
+    color: Blue; /* 로고 색을 검정으로 설정 */
+    font-family: 'Arial', sans-serif; /* 폰트 설정 */
 }
 
-nav a, .auth-links a {
-    margin: 0 10px;
+.header nav {
+    display: flex;
+    gap: 30px; /* 메뉴 간격을 넓게 조정 */
+    justify-content: center; /* 메뉴를 중앙 정렬 */
+}
+
+.header nav a {
     text-decoration: none;
-    color: #333;
+    color: #333; /* 메뉴 색상을 어두운 회색으로 설정 */
+    font-size: 20px;
+    font-weight: bold; /* 글씨 굵기 추가 */
 }
 
-nav a:hover, .auth-links a:hover {
-    color: blue;
+.header nav a:hover {
+    color: blue; /* 호버 시 색상을 파란색으로 변경 */
 }

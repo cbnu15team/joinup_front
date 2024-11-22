@@ -1,0 +1,35 @@
+.notice-board {
+    padding: 20px;
+}
+
+.notice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.notice-table th, .notice-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.notice-table th {
+    background-color: #f4f4f4;
+}
+
+.notice-table a {
+    text-decoration: black;
+    color: blue;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

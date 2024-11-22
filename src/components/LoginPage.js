@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from './Header.js';
 import './LoginPage.css';
 
 function LoginPage() {
@@ -21,13 +20,12 @@ function LoginPage() {
         } else {
             setError('');
             alert('로그인 성공!');
-            navigate('/'); // 메인 페이지로 이동
+            navigate('/main'); // 메인 페이지로 이동
         }
     };
 
     return (
         <div className="login-page">
-            <Header />
             <main>
                 <h2>로그인</h2>
                 <form onSubmit={handleSubmit}>

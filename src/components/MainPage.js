@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from './Header.js';
 import './MainPage.css'; // 스타일 파일 연결
 
 function MainPage() {
     return (
         <div className="main-page">
-            <Header /> {/* 공통 헤더 */}
             <main>
                 <section className="banner">
                     <button className="arrow left">〈</button>
