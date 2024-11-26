@@ -1,0 +1,104 @@
+/* 전체 컨테이너 스타일 */
+.competition-detail {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 박스 그림자 추가 */
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* 제목 스타일 */
+.competition-detail h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 공모전 정보 섹션 */
+.competition-info {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #555;
+}
+
+.info-item p, .info-item a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* 설명 섹션 */
+.competition-description {
+    margin-bottom: 30px;
+}
+
+.competition-description h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.competition-description p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 버튼 섹션 */
+.competition-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.action-button:hover {
+    background: #0056b3;
+}
+
+/* 뒤로가기 버튼 */
+.back-button {
+    display: block;
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.back-button:hover {
+    background: #f0f0f0;
+}
