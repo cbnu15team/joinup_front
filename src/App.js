@@ -15,9 +15,11 @@ import NoticeBoard from './components/NoticeBoard.js';
 import NoticeDetail from './components/NoticeDetail.js';
 import CompetitionPage from './components/CompetitionPage.js';
 import CompetitionDetail from './components/CompetitionDetail.js';
+import UserListPage from "./UserListPage.js";
 
 
 function App() {
+
     const [challenges, setChallenges] = useState([
         { title: "하늘보기 챌린지", description: "매일 하늘 보기" },
         { title: "물마시기 챌린지", description: "매일 2리터 물 마시기" },
@@ -74,27 +76,29 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<OpenScreen />} />
+                <Route path="/" element={<OpenScreen/>}/>
             </Routes>
-            <Header />
+            <Header/>
             <Routes>
-                <Route path="/main" element={<MainPage />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/register" element={<RegisterPage />} />
-                <Route path="/mypage" element={<MyPage />} />
-                <Route path="/challenge" element={<ChallengeBoard challenges={challenges} onDelete={(index) => setChallenges((prev) => prev.filter((_, i) => i !== index))}/>}/>
-                <Route path="/challenge/new" element={<ChallengeForm addChallenge={addChallenge} />} />
-                <Route path="/board" element={<BoardPage posts={posts} />} />
-                <Route path="/board/write" element={<WritePostPage addPost={addPost} challenges={challenges} />} />
-                <Route path="/board/:id" element={<ChallengeDetail posts={posts} />} />
-                <Route path="/notices" element={<NoticeBoard notices={notices} />} />
-                <Route path="/notice/:id" element={<NoticeDetail notices={notices} />} />
-                <Route path="/competition" element={<CompetitionPage competitions={competitions} />} />
-                <Route path="/competition/:id" element={<CompetitionDetail competitions={competitions} />} />
-
+                <Route path="/main" element={<MainPage/>}/>
+                <Route path="/login" element={<LoginPage/>}/>
+                <Route path="/register" element={<RegisterPage/>}/>
+                <Route path="/mypage" element={<MyPage/>}/>
+                <Route path="/challenge" element={<ChallengeBoard challenges={challenges}
+                                                                  onDelete={(index) => setChallenges((prev) => prev.filter((_, i) => i !== index))}/>}/>
+                <Route path="/challenge/new" element={<ChallengeForm addChallenge={addChallenge}/>}/>
+                <Route path="/board" element={<BoardPage posts={posts}/>}/>
+                <Route path="/board/write" element={<WritePostPage addPost={addPost} challenges={challenges}/>}/>
+                <Route path="/board/:id" element={<ChallengeDetail posts={posts}/>}/>
+                <Route path="/notices" element={<NoticeBoard notices={notices}/>}/>
+                <Route path="/notice/:id" element={<NoticeDetail notices={notices}/>}/>
+                <Route path="/competition" element={<CompetitionPage competitions={competitions}/>}/>
+                <Route path="/competition/:id" element={<CompetitionDetail competitions={competitions}/>}/>
+                <Route path="/users" element={<UserListPage />} />
             </Routes>
         </Router>
     );
+
 }
 
 export default App;

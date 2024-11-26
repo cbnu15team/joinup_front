@@ -1,90 +1,124 @@
-import React, { useState } from 'react';
-import './RegisterPage.css';
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
 
-function RegisterPage() {
-    const navigate = useNavigate(); // 페이지 이동을 위한 useNavigate
+function SignUpForm() {
     const [formData, setFormData] = useState({
-        name: '',
-        birthdate: '',
-        phone: '',
+        id: "",
+        password: "",
+        real_name: "",
+        birth: "",
+        phone: ""
     });
 
-    const [error, setError] = useState('');
-    const [success, setSuccess] = useState(false); // 회원가입 성공 여부
-
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
     };
 
     const handleSubmit = (e) => {
+        // 요청 보낼거  console.log로 확인
+        console.log(formData);
+
         e.preventDefault();
+        axios.post("http://localhost:8080/api/users", formData) 
+        .then((response) => {
+                // HTTP 상태 코드 확인
+                if (response.status === 200) {
+                    alert("회원가입 성공!");
+                    console.log("Response Data:", response.data);
+                } else {
+                    alert(`예상치 못한 응답 상태 코드: ${response.status}`);
+                }
+            })
+            .catch((error) => {
+                // 에러의 HTTP 상태 코드 확인
+                if (error.response) {
+                    const statusCode = error.response.status;
+                    const errorMessage = error.response.data?.message || "unknown error";
 
-        // 간단한 유효성 검사
-        if (!formData.name || !formData.birthdate || !formData.phone) {
-            setError('모든 필드를 입력해주세요.');
-        } else {
-            setError('');
-            setSuccess(true); // 성공 상태로 변경
-
-            // 2초 후 메인 페이지로 이동
-            setTimeout(() => {
-                navigate('/'); // 메인 페이지로 이동
-            }, 2000);
-        }
+                    if (statusCode === 400) {
+                        alert(`회원가입 실패 (잘못된 요청): ${errorMessage}`);
+                    } else if (statusCode === 500) {
+                        alert("서버 오류 발생! 다시 시도해주세요.");
+                    } else {
+                        alert(`회원가입 실패! 상태 코드: ${statusCode}`);
+                    }
+                    console.error("Error Response:", error.response);
+                } else if (error.request) {
+                    alert("서버와의 통신이 실패했습니다. 네트워크를 확인해주세요.");
+                    console.error("Error Request:", error.request);
+                } else {
+                    alert(`알 수 없는 오류: ${error.message}`);
+                    console.error("Error:", error);
+                }
+            });
     };
 
     return (
-        <div className="register-page">
-            <main>
-                <h2>회원 가입</h2>
-                {!success ? ( // 성공 여부에 따라 화면 분기
-                    <form onSubmit={handleSubmit}>
-                        <div className="input-group">
-                            <label htmlFor="name">이름</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="홍길동"
-                                value={formData.name}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="birthdate">생년월일</label>
-                            <input
-                                type="date"
-                                id="birthdate"
-                                name="birthdate"
-                                value={formData.birthdate}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="phone">전화번호</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="010-1234-5678"
-                                value={formData.phone}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        {error && <p className="error-message">{error}</p>}
-                        <button type="submit">회원 가입</button>
-                    </form>
-                ) : (
-                    <div className="success-message">
-                        <h3>회원가입이 완료되었습니다!</h3>
-                        <p>잠시 후 메인 페이지로 이동합니다.</p>
-                    </div>
-                )}
-            </main>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <h2>회원가입</h2>
+            <label>
+                ID:
+                <input
+                    type="text"
+                    name="id"
+                    value={formData.id}
+                    onChange={handleChange}
+                    required
+                />
+            </label>
+            <br />
+            <label>
+                비밀번호:
+                <input
+                    type="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                />
+            </label>
+            <br />
+            <label>
+                이름:
+                <input
+                    type="text"
+                    name="real_name"
+                    value={formData.real_name}
+                    onChange={handleChange}
+                    required
+                />
+            </label>
+            <br />
+            <label>
+                생년월일:
+                <input
+                    type="text"
+                    name="birth"
+                    value={formData.birth}
+                    placeholder="YYYYMMDD"
+                    onChange={handleChange}
+                    required
+                />
+            </label>
+            <br />
+            <label>
+                전화번호:
+                <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    placeholder="010XXXXXXXX"
+                    onChange={handleChange}
+                    required
+                />
+            </label>
+            <br />
+            <button type="submit">회원가입</button>
+        </form>
     );
 }
 
-export default RegisterPage;
+export default SignUpForm;
