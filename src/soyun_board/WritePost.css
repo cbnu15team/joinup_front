@@ -1,0 +1,120 @@
+/* 전체 페이지를 화면 전체 크기로 설정 */
+.write-post-page {
+    font-family: Arial, sans-serif; /* 글꼴 설정 */
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5); /* 그라데이션 배경색 */
+    padding: 20px; /* 내부 여백 */
+    max-width: 1500px; /* 최대 너비 */
+    margin: 0 auto; /* 화면 중앙 정렬 */
+    border-radius: 10px; /* 모서리를 약간 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가로 입체감 */
+    min-height: 100vh; /* 최소 높이를 화면 높이에 맞추기 */
+    background-size: cover; /* 배경이 전체 화면을 덮도록 설정 */
+    display: flex; /* Flexbox로 내부 요소 중앙 정렬 */
+    flex-direction: column; /* 세로 방향으로 배치 */
+    justify-content: flex-start; /* 콘텐츠 상단에 배치 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    overflow: hidden; /* 화면을 넘어서는 내용은 숨김 처리 */
+}
+
+/* 제목 스타일 */
+.write-post-page h1 {
+    padding-left: 305px;
+    font-size: 28px; /* 제목 폰트 크기 */
+    margin-bottom: 60px; /* 제목 아래 여백 */
+    color: #333; /* 제목 색상 */
+}
+
+/* 입력 필드와 버튼 등을 감싸는 폼 */
+.write-post-page form {
+    width: 100%; /* 너비를 100%로 설정 */
+    max-width: 800px; /* 최대 너비 */
+    min-height: 100vh; /* 최소 높이를 화면 높이에 맞추기 */
+    background-color: white; /* 흰색 배경 */
+    padding: 30px; /* 안쪽 여백 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+/* 라벨 스타일 */
+.write-post-page label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 입력 필드 스타일 */
+.write-post-page input,
+.write-post-page textarea,
+.write-post-page select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+/* 입력 필드 포커스 시 스타일 */
+.write-post-page input:focus,
+.write-post-page textarea:focus,
+.write-post-page select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* 버튼 스타일 */
+.write-post-page button {
+    padding: 14px 24px;
+    background-color: #2e8df8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 버튼 hover 시 효과 */
+.write-post-page button:hover {
+    background-color: #a94cf5;
+    transform: scale(1.01); /* 호버시 버튼 크기 약간 확대 */
+}
+
+/* 미리보기 이미지 스타일 */
+.preview {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-top: 15px;
+    border: 2px solid #0b0b0b;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* textarea 스타일 */
+.write-post-page textarea {
+    height: 200px;
+    resize: vertical;
+    margin-bottom: 150px;
+}
+
+/* 선택 박스 스타일 */
+.write-post-page select {
+    width: 103%; /* 너비를 100%로 설정 */
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+/* 선택 박스 포커스 스타일 */
+.write-post-page select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
