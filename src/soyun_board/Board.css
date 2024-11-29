@@ -1,0 +1,151 @@
+/* 전체 페이지 레이아웃 */
+.board-page {
+    font-family: Arial, sans-serif; /* 글꼴 설정 */
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5); /* 전체 화면 배경 그라데이션 */
+    padding: 20px; /* 페이지 상단과 하단 여백 */
+    min-height: 100vh; /* 화면 전체 높이 사용 */
+    display: flex; /* 내부 요소 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: flex-start; /* 수직 상단 정렬로 변경 */
+}
+
+/* 중앙에 하얀색 컨테이너 */
+.inner-container {
+    background-color: rgb(255, 255, 255); /* 흰색 배경 */
+    width: 100%; /* 기본 너비 */
+    max-width: 900px; /* 최대 너비 */
+    min-height: 100vh; /* 화면 전체 높이 사용 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 입체감을 위한 그림자 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+/* 페이지 제목 스타일 */
+.board-page h1 {
+    font-size: 30px; /* 글자 크기 */
+    color: #111111; /* 글자 색상 */
+    margin-bottom: 60px; /* 아래 여백 */
+    text-align: left; /* 제목 왼쪽 정렬 */
+}
+
+/* 상단 헤더: 글 목록과 작성 버튼을 포함 */
+.board-header {
+    display: flex; /* 가로 배치 */
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    margin-bottom: 20px; /* 아래 여백 */
+}
+
+.board-header p {
+    font-size: 20px; /* 글자 크기 */
+    color: #201e21; /* 글자 색상 */
+    font-weight: bold; /* 굵은 글씨 */
+    margin: 0; /* 여백 제거 */
+}
+
+/* 작성 버튼 스타일 */
+.write-button {
+    background-color: #2382e9; /* 버튼 배경색 */
+    color: white; /* 글자 색상 */
+    padding: 10px 15px; /* 내부 여백 */
+    text-decoration: none; /* 링크 기본 스타일 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    font-size: 15px; /* 글자 크기 */
+    cursor: pointer; /* 클릭 가능 마우스 포인터 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 살짝 그림자 추가로 입체감 */
+    transition: background-color 0.3s; /* 배경색 변경 애니메이션 */
+}
+
+.write-button:hover {
+    background-color: #c599fe; /* 호버 시 버튼 색상 */
+    transform: scale(1.05); /* 호버시 버튼 크기 약간 확대 */
+}
+
+/* 게시판 테이블 */
+.board-table {
+    width: 100%; /* 전체 너비 */
+    border-collapse: collapse; /* 테두리 중복 제거 */
+    background-color: rgba(248, 246, 246, 0.9); /* 약간 투명한 흰색 테이블 배경 */
+    border: 1px solid #171717; /* 테두리 색상 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가로 입체감 */
+    margin-bottom: 20px; /* 아래 여백 */
+    border-radius: 8px; /* 테이블 모서리 둥글게 */
+    overflow: hidden; /* 둥근 모서리에 내용이 넘치지 않도록 */
+}
+
+.board-table th, 
+.board-table td {
+    padding: 6px; /* 셀 내부 여백 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    border: 1px solid #ddd; /* 셀 테두리 */
+}
+
+.board-table th {
+    background-color: #d4ebf7; /* 테이블 헤더 배경 */
+    color: #333; /* 테이블 헤더 글자 색상 */
+    font-weight: bold; /* 굵은 글씨 */
+}
+
+/* 링크 스타일 */
+.board-table a {
+    color: #0475ef; /* 링크 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.board-table a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+/* 페이징 버튼 컨테이너 */
+.pagination {
+    display: flex; /* 버튼을 가로로 나열 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 2px; /* 버튼 간 간격 */
+}
+
+/* 페이징 버튼 기본 스타일 */
+.pagination button {
+    padding: 8px 12px; /* 버튼 내부 여백 */
+    background-color: #3699d2; /* 기본 배경색을 파란색으로 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가로 입체감 */
+    color: white; /* 기본 글자색 */
+    border: 1px; /* 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer; /* 클릭 가능 마우스 포인터 */
+    transition: background-color 0.3s; /* 배경색 변경 애니메이션 */
+}
+
+/* 현재 페이지 버튼 스타일 */
+.pagination button.active {
+    background-color: #79dafd; /* 활성화된 버튼 배경색 */
+    color: white; /* 활성화된 버튼 글자색 */
+}
+
+/* 페이징 버튼 호버 효과 */
+.pagination button:hover {
+    background-color: #4eb7fd; /* 호버 시 배경색 */
+    color: white; /* 호버 시 글자색 */
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    /* 작은 화면에서 제목 크기 조정 */
+    .board-header h1 {
+        font-size: 20px; /* 제목 크기 */
+    }
+
+    .write-button {
+        font-size: 14px; /* 작성 버튼 크기 줄이기 */
+        padding: 8px 12px; /* 버튼 여백 줄이기 */
+    }
+
+    .board-table th, .board-table td {
+        font-size: 14px; /* 테이블 글자 크기 줄이기 */
+    }
+
+    .pagination button {
+        padding: 6px 10px; /* 페이징 버튼 크기 줄이기 */
+    }
+}
