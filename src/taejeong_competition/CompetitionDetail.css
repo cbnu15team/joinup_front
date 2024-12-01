@@ -102,3 +102,9 @@
 .back-button:hover {
     background: #f0f0f0;
 }
+.card-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
