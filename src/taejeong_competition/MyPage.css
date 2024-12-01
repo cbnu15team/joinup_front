@@ -1,0 +1,131 @@
+/* 전체 마이페이지 컨테이너 스타일 */
+.mypage-container {
+    display: flex; /* 컨테이너 내부 요소를 플렉스 박스 레이아웃으로 설정 */
+    flex-direction: column; /* 내부 요소를 세로로 정렬 */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 컨테이너 중앙 정렬 */
+    background-color: #f7faff; /* 배경색 설정 */
+    min-height: 100vh; /* 화면 전체 높이를 최소 높이로 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+}
+
+/* 마이페이지 헤더 섹션 스타일 */
+.mypage-header {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin-bottom: 20px; /* 하단 여백 추가 */
+}
+
+.mypage-header h1 {
+    font-size: 20px; /* 제목 글자 크기 */
+    margin-bottom: 5px; /* 제목과 설명 간 여백 */
+    color: #333; /* 제목 글자 색상 */
+}
+
+.mypage-header p {
+    font-size: 16px; /* 설명 글자 크기 */
+    color: #666; /* 설명 글자 색상 */
+}
+
+/* 프로필 아이콘 이미지 스타일 */
+.profile-icon {
+    background: gray; /* 배경색 */
+    padding: 70px; /* 내부 여백 */
+    border-radius: 100px; /* 모서리를 둥글게 만듦 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    margin-top: 0px; /* 상단 여백 추가 */
+    
+}
+.profile-info {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin-top: 10px; /* 아이디와 프로필 사진 간 여백 */
+}
+
+.profile-info h1 {
+    font-size: 20px; /* ID 글자 크기 */
+    margin: 0; /* 추가 여백 제거 */
+    color: #333; /* 글자 색상 */
+}
+
+.profile-info p {
+    font-size: 16px; /* 컴퓨터공학 글자 크기 */
+    color: #666; /* 글자 색상 */
+    margin: 5px 0 0; /* ID와의 간격 추가 */
+}
+
+
+/* 마이페이지 메인 레이아웃 스타일 */
+.mypage-main {
+    display: grid; /* 메인 섹션을 그리드 레이아웃으로 설정 */
+    grid-template-columns: 1fr 2fr; /* 두 개의 컬럼 설정: 1:2 비율 */
+    gap: 20px; /* 컬럼 간 간격 설정 */
+    justify-content: center; /* 수직 가운데 정렬 */
+    width: 0%; /* 너비를 컨테이너에 맞춤 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 내 활동 스타일 */
+.profile-section {
+    background: white; /* 배경색 설정 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    width: 400px; /* 원하는 너비로 수정 */
+    max-width: 90%; /* 최대 너비를 부모 요소에 맞추기 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.profile-section h2 {
+    font-size: px; /* 섹션 제목 글자 크기 */
+    margin-bottom: 10px; /* 제목 아래 여백 */
+}
+
+/* 활동 리스트 스타일 */
+.activity-list {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0; /* 리스트 내부 여백 제거 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 100px; /* 높이 설정 */
+
+}
+
+.activity-item {
+    display: flex; /* 플렉스 레이아웃 */
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    margin-bottom: 10px; /* 각 항목 간 간격 */
+    font-size: 16px; /* 항목 글자 크기 */
+    color: #333; /* 글자 색상 */
+}
+
+/* 상태 점 스타일 */
+.status-dot {
+    font-size: 14px; /* 점 크기 */
+    margin-left: 10px; /* 점과 텍스트 간 간격 */
+}
+
+/* 상태 점 색상 정의 */
+.in-progress {
+    color: #007bff; /* 진행 중 상태의 색상 */
+}
+
+.completed {
+    color: #ff4d4d; /* 완료된 상태의 색상 */
+}
+
+.written {
+    color: #28a745; /* 작성 완료 상태의 색상 */
+}
+
+/* 콘텐츠 섹션 스타일 */
+.content-section {
+    background: white; /* 배경색 설정 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.content-section h2 {
+    font-size: 18px; /* 섹션 제목 글자 크기 */
+    margin-bottom: 10px; /* 제목 아래 여백 */
+}
+
