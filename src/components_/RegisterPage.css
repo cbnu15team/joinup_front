@@ -1,0 +1,83 @@
+/* 회원가입 페이지 스타일 */
+.register-page {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5);
+    display: flex;              /* Flexbox를 사용하여 세로 중앙 정렬 */
+    justify-content: center;    /* 가로 중앙 정렬 */
+    align-items: center;        /* 세로 중앙 정렬 */
+    height: 100vh;              /* 화면 높이를 100%로 설정 */
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 40px !important;
+    left: 60px !important;/* 제목을 오른쪽으로 이동 */
+
+}
+
+form {
+    max-width: 400px;
+    width: 100%;                /* 폼 너비를 100%로 설정하여 화면 크기에 맞게 늘어남 */
+    background: #fff;
+    padding: 60px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+     width: calc(100% - 20px); /* 버튼 너비를 기존대로 유지 */
+        padding: 14px; /* 버튼 높이 조정 */
+        background: #0000FF; /* 파란색 배경 */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background 0.3s, box-shadow 0.3s ease; /* 부드러운 전환 추가 */
+    }
+
+
+/* 마우스 오버 시 효과 */
+button:hover {
+    background: #0000FF; /* 마우스 오버 시에도 파란색 유지 */
+    box-shadow: 0px 6px 15px rgba(0, 0, 255, 0.7); /* 파란색 그림자 효과 추가 */
+}
+
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    background: #e6ffe6;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #b3ffb3;
+    margin-top: 20px;
+    color: #006600;
+}
