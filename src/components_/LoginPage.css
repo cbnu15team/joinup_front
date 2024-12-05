@@ -1,0 +1,104 @@
+/* 로그인 페이지 스타일 */
+.login-page {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5); /* 배경 그라데이션 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* 제목과 회원가입 버튼 중앙 고정 */
+.login-main {
+    text-align: center; /* 제목과 회원가입 버튼 중앙 정렬 */
+}
+
+/* 제목 스타일 */
+h2 {
+    font-size: 34px !important;
+    margin-bottom: -10px !important;
+    text-align: center; /* 제목 중앙 정렬 */
+    position: relative; /* 상대 위치 설정 */
+    left: 40px; /* 제목을 오른쪽으로 이동 */
+}
+
+/* 입력 박스와 버튼 그룹 */
+.input-container {
+    max-width: 800px; /* 최대 너비를 800px로 늘림 */
+    width: 100%; /* 부모 박스 너비를 100%로 */
+    padding: 40px 25px; /* 내부 여백을 더 늘려서 크기를 키움 */
+    margin: 0 auto; /* 박스를 중앙에 정렬 */
+    margin-left: -20px; /* 왼쪽으로 20px 이동 */
+}
+
+
+
+/* 입력 그룹 스타일 */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left; /* 라벨과 입력창 왼쪽 정렬 */
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: calc(100% - 10px); /* 입력 칸 너비를 오른쪽으로 조금 더 늘림 */
+    padding: 12px; /* 입력 필드의 높이와 내부 여백 조정 */
+    border: 1px solid #ddd; /* 입력 필드 테두리 */
+    border-radius: 4px; /* 둥근 모서리 */
+    font-size: 16px; /* 글자 크기 유지 */
+    box-sizing: border-box; /* 패딩과 테두리를 포함하여 너비 계산 */
+}
+
+/* 버튼 스타일 */
+.login-button {
+    width: calc(100% - 20px); /* 버튼 너비를 기존대로 유지 */
+    padding: 14px; /* 버튼 높이 조정 */
+    background: #0000FF; /* 파란색 배경 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s, box-shadow 0.3s ease; /* 부드러운 전환 추가 */
+}
+
+/* 마우스 오버 시 효과 */
+.login-button:hover {
+    background: #0000FF; /* 마우스 오버 시에도 파란색 유지 */
+    box-shadow: 0px 6px 15px rgba(0, 0, 255, 0.7); /* 파란색 그림자 효과 추가 */
+}
+
+
+
+/* 회원가입 링크 스타일 */
+.register-link {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    color: #0000ff;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+    position: relative; /* 상대 위치 설정 */
+    left: 60px; /* 회원가입 버튼을 오른쪽으로 이동 */
+}
+
+/* 오류 메시지 스타일 */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: center; /* 에러 메시지도 중앙 정렬 */
+}
