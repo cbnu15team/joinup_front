@@ -1,0 +1,111 @@
+/* 챌린지 게시판 스타일 */
+.challenge-board {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5); /* 전체 배경 그라데이션 설정 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+    justify-content: flex-start; /* 상단 정렬 */
+    height: auto; /* 화면 크기에 맞춰 자동 조정 */
+    min-height: 100vh; /* 화면 높이가 콘텐츠에 맞게 최소화 */
+}
+
+/* 배너 영역 스타일 */
+.challenge-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000FF; /* 배경을 파란색으로 설정 */
+    padding: 6px;
+    margin-top: 200px; /* 배너를 살짝 아래로 이동 */
+    margin-bottom: 150px; /* 배너 아래 여백 */
+    border-radius: 8px;
+    width: 100%;
+    border: 2px solid #0000FF; /* 테두리를 파란색으로 설정 */
+}
+
+/* 배너 텍스트 */
+.challenge-banner-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 배너 밖 문구 스타일 */
+.challenge-start-text {
+    text-align: center;
+    font-size: 35px; /* 글자 크기 키우기 */
+    font-weight: bold; /* 글자 두껍게 */
+    color: #333; /* 배너 밖 문구 색상 */
+    margin-top: 250px; /* 살짝 아래로 이동 */
+    margin-bottom: 250px; /* 배너와 문구 간의 간격 */
+}
+
+/* '현재 진행 중인 챌린지가 없습니다.' 문구 위치 조정 */
+.challenge-board p {
+    margin-top: 50px; /* 문구 위쪽 여백을 줄여서 위로 이동 */
+    margin-bottom: 30px; /* 문구 아래 여백 추가 */
+}
+
+/* 챌린지 등록하기 버튼 중앙 배치 및 너비 조정 */
+.add-challenge-button {
+    display: block;
+    margin: 40px auto; /* 버튼을 중앙에 배치 */
+    padding: 20px 90px; /* 버튼 패딩을 늘려서 크기 키우기 */
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: auto; /* 자동으로 너비 조정 */
+    max-width: 400px; /* 최대 너비를 400px로 늘림 */
+    font-size: 24px; /* 폰트 크기 키우기 */
+    font-weight: 800; /* 글자 두껍게 하기 */
+    transition: all 0.3s ease; /* 마우스를 올렸을 때 변화 부드럽게 */
+}
+
+/* 마우스를 올렸을 때 버튼 색상 변경 */
+.add-challenge-button:hover {
+    background-color: #0000FF;
+}
+
+/* 마우스를 올렸을 때 버튼 그림자 추가 */
+.add-challenge-button:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 255, 0.7); /* 파란색 그림자 강하게 설정 */
+    transition: all 0.3s ease; /* 부드러운 전환 */
+}
+
+/* 콘텐츠 카드 스타일 */
+.challenge-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px; /* 너비 조정 */
+    height: 250px; /* 높이를 더 크게 설정 */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 10px; /* 카드 간격을 조금 더 주기 */
+}
+
+/* '챌린지 등록하기' 버튼 스타일 */
+.challenge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 카드 간 간격 늘리기 */
+    justify-content: center; /* 카드들이 가운데로 정렬되도록 */
+    margin-bottom: 50px; /* 하단에 여백 추가 */
+}
+
+/* 모바일 반응형 레이아웃 */
+@media (max-width: 768px) {
+    .challenge-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .challenge-card-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
