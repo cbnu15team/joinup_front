@@ -1,0 +1,66 @@
+/* 전체 페이지 레이아웃 */
+.board-post {
+    font-family: Arial, sans-serif; /* 글꼴 설정 */
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5); /* 전체 화면 배경 그라데이션 */
+    padding: 20px; /* 페이지 상단과 하단 여백 */
+    min-height: 100vh; /* 화면 전체 높이 사용 */
+    display: flex; /* 내부 요소 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: flex-start; /* 수직 상단 정렬로 변경 */
+}
+
+/* 상세 게시글 컨테이너 */
+.detail-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px; /* 조금 더 부드러운 모서리 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 더 부드러운 그림자 */
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.detail-container:hover {
+    transform: translateY(-5px); /* 호버 시 약간의 움직임 */
+}
+
+/* 제목 스타일 */
+.post-title {
+    font-size: 32px; /* 더 큰 제목 */
+    color: #4a148c; /* 짙은 보라색 */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ce93d8; /* 강조된 하단 라인 */
+    padding-bottom: 10px;
+}
+
+/* 메타 정보 스타일 (작성자, 날짜) */
+.post-meta {
+    font-size: 14px;
+    color: #5e5e5e; /* 더 진한 회색 */
+    margin-bottom: 20px;
+    font-style: italic; /* 약간의 변화를 위해 기울임 */
+}
+
+/* 본문 내용 스타일 */
+.post-content {
+    font-size: 18px;
+    color: #212121; /* 짙은 회색으로 가독성 향상 */
+    line-height: 1.8; /* 줄 간격을 조금 더 넓혀 읽기 쉽게 */
+    white-space: pre-line;
+    text-align: justify; /* 정렬을 통해 깔끔하게 */
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 600px) {
+    .detail-container {
+        padding: 20px;
+    }
+
+    .post-title {
+        font-size: 24px;
+    }
+
+    .post-content {
+        font-size: 16px;
+    }
+}

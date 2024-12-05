@@ -1,0 +1,115 @@
+/* 전체 페이지 레이아웃 */
+.board-page {
+    font-family: Arial, sans-serif; /* 글꼴 설정 */
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5); /* 그라데이션 배경색 */
+    padding: 20px; /* 내부 여백 */
+    max-width: 1200px; /* 최대 너비 */
+    margin: 0 auto; /* 화면 중앙 정렬 */
+    border-radius: 10px; /* 모서리를 약간 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가로 입체감 */
+}
+
+/* 페이지 제목 스타일 */
+.board-page h1 {
+    font-size: 24px; /* 글자 크기 */
+    color: #333; /* 글자 색상 */
+    margin-bottom: 20px; /* 아래 여백 */
+}
+
+/* 상단 헤더: 글 목록과 작성 버튼을 포함 */
+.board-header {
+    display: flex; /* 가로 배치 */
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    margin-bottom: 20px; /* 아래 여백 */
+}
+
+/* 작성 버튼 스타일 */
+.write-button {
+    background-color: #007bff; /* 버튼 배경색 */
+    color: white; /* 글자 색상 */
+    padding: 10px 15px; /* 내부 여백 */
+    text-decoration: none; /* 링크 기본 스타일 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    font-size: 16px; /* 글자 크기 */
+    cursor: pointer; /* 클릭 가능 마우스 포인터 */
+    transition: background-color 0.3s; /* 배경색 변경 애니메이션 */
+}
+
+.write-button:hover {
+    background-color: #0056b3; /* 호버 시 버튼 색상 */
+}
+
+/* 게시판 테이블 */
+.board-table {
+    width: 100%; /* 전체 너비 */
+    border-collapse: collapse; /* 테두리 중복 제거 */
+    background-color: rgba(255, 255, 255, 0.9); /* 약간 투명한 흰색 테이블 배경 */
+    border: 1px solid #ddd; /* 테두리 색상 */
+    margin-bottom: 20px; /* 아래 여백 */
+    border-radius: 8px; /* 테이블 모서리 둥글게 */
+    overflow: hidden; /* 둥근 모서리에 내용이 넘치지 않도록 */
+}
+
+.board-table th, 
+.board-table td {
+    padding: 10px; /* 셀 내부 여백 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    border: 1px solid #ddd; /* 셀 테두리 */
+}
+
+.board-table th {
+    background-color: #e1f5fe; /* 테이블 헤더 배경 */
+    color: #333; /* 테이블 헤더 글자 색상 */
+    font-weight: bold; /* 굵은 글씨 */
+}
+
+/* 페이징 버튼 컨테이너 */
+.pagination {
+    display: flex; /* 버튼을 가로로 나열 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 5px; /* 버튼 간 간격 */
+}
+
+/* 페이징 버튼 기본 스타일 */
+.pagination button {
+    padding: 8px 12px; /* 버튼 내부 여백 */
+    background-color: #ddd; /* 기본 배경색 */
+    color: #333; /* 기본 글자색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer; /* 클릭 가능 마우스 포인터 */
+    transition: background-color 0.3s; /* 배경색 변경 애니메이션 */
+}
+
+/* 현재 페이지 버튼 스타일 */
+.pagination button.active {
+    background-color: #007bff; /* 활성화된 버튼 배경 */
+    color: white; /* 활성화된 버튼 글자색 */
+}
+
+/* 페이징 버튼 호버 효과 */
+.pagination button:hover {
+    background-color: #0056b3; /* 호버 시 배경색 */
+    color: white; /* 호버 시 글자색 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .board-header h1 {
+        font-size: 20px; /* 작은 화면에서 제목 크기 조정 */
+    }
+
+    .write-button {
+        font-size: 14px; /* 작성 버튼 크기 줄이기 */
+        padding: 8px 12px; /* 버튼 여백 줄이기 */
+    }
+
+    .board-table th, .board-table td {
+        font-size: 14px; /* 테이블 글자 크기 줄이기 */
+    }
+
+    .pagination button {
+        padding: 6px 10px; /* 페이징 버튼 크기 줄이기 */
+    }
+}
