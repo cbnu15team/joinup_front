@@ -5,7 +5,7 @@ function SignUpForm() {
     const [formData, setFormData] = useState({
         id: "",
         password: "",
-        real_name: "",
+        realName: "", // 수정
         birth: "",
         phone: ""
     });
@@ -18,11 +18,12 @@ function SignUpForm() {
     };
 
     const handleSubmit = (e) => {
-        // 요청 보낼거  console.log로 확인
+        // 요청 보낼거 console.log로 확인
         console.log(formData);
 
         e.preventDefault();
-        axios.post("http://localhost:8080/api/users", formData) 
+
+        axios.post("http://localhost:8080/api/users/register", formData) 
         .then((response) => {
                 // HTTP 상태 코드 확인
                 if (response.status === 200) {
@@ -85,8 +86,8 @@ function SignUpForm() {
                 이름:
                 <input
                     type="text"
-                    name="real_name"
-                    value={formData.real_name}
+                    name="realName" // 수정
+                    value={formData.realName} // 수정
                     onChange={handleChange}
                     required
                 />
