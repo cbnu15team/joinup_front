@@ -1,0 +1,55 @@
+/* 챌린지 상세 페이지 스타일 */
+.challenge-detail {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.challenge-detail h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.challenge-detail p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.post-details {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.post-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post-details p {
+    margin: 5px 0;
+}
+
+.post-details .post-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.post-details button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-details button:hover {
+    background-color: #0056b3;
+}
