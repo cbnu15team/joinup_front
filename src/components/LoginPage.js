@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './LoginPage.css';
 
 function LoginPage() {
     const navigate = useNavigate();
-    const [formData, setFormData] = useState({ id: '', pw: '' });
+    const [formData, setFormData] = useState({ id: '', password: '' });
     const [error, setError] = useState('');
 
     const handleChange = (e) => {
@@ -12,15 +13,36 @@ function LoginPage() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!formData.id || !formData.pw) {
-            setError('ID와 PW를 모두 입력해주세요.');
-        } else {
-            setError('');
-            alert('로그인 성공!');
-            navigate('/main'); // 메인 페이지로 이동
+        // 입력값 검증
+        if (!formData.id && !formData.password) {
+            setError('아이디와 비밀번호를 모두 입력해주세요.');
+            return;
+        } else if (!formData.id) {
+            setError('아이디를 입력하세요.');
+            return;
+        } else if (!formData.password) {
+            setError('비밀번호를 입력하세요.');
+            return;
+        }
+
+        try {
+            // 서버로 로그인 요청
+            const response = await axios.post('http://localhost:8080/api/users/login', formData);
+
+            if (response.status === 200) {
+                alert('로그인 성공!');
+                navigate('/main'); // 메인 페이지로 이동
+            }
+        } catch (error) {
+            if (error.response) {
+                // 서버에서 반환된 에러 메시지 처리
+                setError(error.response.data || '로그인 실패. 다시 시도해주세요.');
+            } else {
+                setError('서버와의 통신에 실패했습니다.');
+            }
         }
     };
 
@@ -41,13 +63,13 @@ function LoginPage() {
                         />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="pw">PW</label>
+                        <label htmlFor="password">PW</label>
                         <input
                             type="password"
-                            id="pw"
-                            name="pw"
+                            id="password"
+                            name="password"
                             placeholder="비밀번호를 입력하세요"
-                            value={formData.pw}
+                            value={formData.password}
                             onChange={handleChange}
                         />
                     </div>
