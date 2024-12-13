@@ -14,9 +14,10 @@
 /* 폼 스타일 */
 .challenge-form {
     width: 100%; /* 폼의 너비를 화면에 맞게 설정 */
-    max-width: 550px; /* 최대 너비 설정 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    max-height: 50%;
     min-height: 50%; /* 최소 높이를 화면의 50%로 설정 */
-    padding: 15px; /* 폼 내부 여백을 줄임 */
+    padding: 100px; /* 폼 내부 여백을 줄임 */
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -27,6 +28,8 @@
     flex-direction: column;
     justify-content: center; /* 세로 중앙 정렬 */
     align-items: center; /* 수평 중앙 정렬 */
+    margin-top: 200px; /* 폼을 추가로 아래로 이동 */
+
 }
 
 /* 폼 제목 스타일 */
@@ -100,4 +103,5 @@
         width: 100%; /* 모바일 화면에서 폼 너비를 전체로 조정 */
     }
 }
+
 
