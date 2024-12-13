@@ -1,4 +1,4 @@
-/* 챌린지 게시판 스타일 */
+npm /* 챌린지 게시판 스타일 */
 .challenge-board {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f3e5f5); /* 전체 배경 그라데이션 설정 */
@@ -53,7 +53,7 @@
     display: block;
     margin: 40px auto; /* 버튼을 중앙에 배치 */
     padding: 20px 90px; /* 버튼 패딩을 늘려서 크기 키우기 */
-    background-color: #0000ff;
+    background-color: #0000FF;
     color: white;
     border: none;
     border-radius: 50px;
@@ -78,14 +78,32 @@
 
 /* 콘텐츠 카드 스타일 */
 .challenge-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 200px; /* 너비 조정 */
-    height: 250px; /* 높이를 더 크게 설정 */
-    border-radius: 8px;
+    background-color: #F0F8FF ;
+    border: 5px solid #DCEFFD;
+    padding: 30px;
+    width: 500px; /* 너비 조정 */
+    height: 270px; /* 높이를 더 크게 설정 */
+    border-radius: 65px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center; /* 텍스트 중앙 정렬 */
-    margin: 10px; /* 카드 간격을 조금 더 주기 */
+    margin: 20px; /* 카드 간격을 조금 더 주기 */
+}
+
+/* 세부 버튼 스타일 */
+.details-button {
+    border-radius: 30px;
+    background-color: #0000FF;
+    padding: 17px;
+}
+
+/* 참여 버튼 스타일 */
+.participate-button {
+    border-radius: 30px;
+    background-color: #0000FF;
+    padding: 17px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 /* '챌린지 등록하기' 버튼 스타일 */
@@ -108,24 +126,4 @@
         width: 100%;
         margin-bottom: 20px;
     }
-}
-
-/* 수정된 부분: 게시판 내용에 맞는 세부 스타일 */
-.challenge-card h3 {
-    font-size: 18px; /* 제목 폰트 크기 */
-    font-weight: bold;
-    color: #333;
-}
-
-.challenge-card p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* 작성자 정보 및 조회수 스타일 */
-.challenge-card .author,
-.challenge-card .views {
-    font-size: 12px;
-    color: #888;
-    margin-top: 5px;
 }
